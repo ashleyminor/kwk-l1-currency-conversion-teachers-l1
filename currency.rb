@@ -89,4 +89,3 @@ when 8
 else
   puts "Invalid input, exiting..."
 end
-end
