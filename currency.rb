@@ -1,33 +1,41 @@
-def usd_to_eur(dollar)
-  return dollar * 0.86
+def usd_to_eur(input)
+  ans = input.to_i * 0.86
+  return ans
 end
 
-def eur_to_usd(euro)
-  return euro * 1.16
+def eur_to_usd(input)
+  ans = input.to_f / 0.86
+  return ans
 end
 
-def usd_to_jpy(dollar)
-  return dollar * 110.13
+def usd_to_gbp(input)
+  ans = input.to_i * 0.75
+  return ans
 end
 
-def jpy_to_usd(yen)
-  return yen * 0.0091
+def gbp_to_usd(input)
+  ans = input.to_f / 0.75
+  return ans
 end
 
-def usd_to_gbp(dollar)
-  return dollar * 0.76
+def usd_to_aud(input)
+  ans = input.to_i * 1.35
+  return ans
 end
 
-def gbp_to_usd(pound)
-  return pound * 1.32
+def aud_to_usd(input)
+  ans = input.to_f / 1.35
+  return ans
 end
 
-def usd_to_aud(dollar)
-  return dollar * 1.35
+def usd_to_jpy(input)
+  ans = input.to_i * 110.14
+  return ans
 end
 
-def aud_to_usd(aust_dollar)
-  return aust_dollar * 0.74
+def jpy_to_usd(input)
+  ans = input.to_f / 110.14
+  return ans
 end
 
 puts "How much money do you want to convert?"
@@ -47,21 +55,37 @@ choice = gets.chomp().to_i
 
 case choice
 when 1
-  puts usd_to_eur(choice)
+  #code here
+  total = amount * 0.86
+  puts total
 when 2
-  puts usd_to_jpy(choice)
+  #code here
+  total = amount * 110.14
+  puts total
 when 3
-  puts usd_to_gbp(choice)
+  #code here
+  total = amount * 0.75
+  puts total
 when 4
-  puts usd_to_aud(choice)
+  #code here
+  total = amount * 1.35
+  puts total
 when 5
-  puts eur_to_usd(choice)
+  #code here
+  total = amount / 0.86
+  puts total
 when 6
-  puts jpy_to_usd(choice)
+  #code here
+  total = amount / 110.14
+  puts total
 when 7
-  puts gbp_to_usd(choice)
+  #code here
+  total = amount / 0.75
+  puts total
 when 8
-  puts aud_to_usd(choice)
+  #code here
+  total = amount / 1.35
+  puts total
 else
   puts "Invalid input, exiting..."
 end
